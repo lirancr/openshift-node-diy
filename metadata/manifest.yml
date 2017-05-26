@@ -3,9 +3,9 @@ Cartridge-Short-Name: NODEDIY
 Display-Name: Node DIY
 Description: "Node.js cartridge that lets you take the wheel"
 Version: '0.10.35'
-Source-Url: https://github.com/connyay/openshift-node-diy.git
+Source-Url: https://github.com/lirancr/openshift-node-diy.git
 License: "Apache v2"
-License-Url: https://github.com/connyay/openshift-node-diy/blob/master/LICENSE
+License-Url: https://github.com/lirancr/openshift-node-diy/blob/master/LICENSE
 Cartridge-Version: 0.1
 Compatible-Versions: ['0.1']
 Cartridge-Vendor: connyay
@@ -16,6 +16,9 @@ Categories:
   - nodejs
   - web_framework
 Cart-Data:
+  - Key: OPENSHIFT_NODE_PROJECT_DIR
+    Type: environment
+    Description: "Directory to the node project to run."
   - Key: OPENSHIFT_NODEDIY_LOG_DIR
     Type: environment
     Description: "Directory to store application log files."

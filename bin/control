@@ -46,8 +46,8 @@ function start() {
 
     logf="${OPENSHIFT_NODEJS_LOG_DIR}node.log"
     touch $logf
-    if [ -f "${OPENSHIFT_REPO_DIR}package.json" ]; then
-        cd ${OPENSHIFT_REPO_DIR}
+    if [ -f "${OPENSHIFT_NODE_PROJECT_DIR}package.json" ]; then
+        cd ${OPENSHIFT_NODE_PROJECT_DIR}
         client_message "Starting node using npm start"
         nohup npm start >> $logf 2>&1 &
         npm_pid=$!;
