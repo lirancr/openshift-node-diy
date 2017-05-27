@@ -45,6 +45,7 @@ function start() {
     fi
 
     logf="${OPENSHIFT_NODEJS_LOG_DIR}node.log"
+	echo "Checking for package.json at ${OPENSHIFT_NODE_PROJECT_DIR}"
     touch $logf
     if [ -f "${OPENSHIFT_NODE_PROJECT_DIR}package.json" ]; then
         cd ${OPENSHIFT_NODE_PROJECT_DIR}
